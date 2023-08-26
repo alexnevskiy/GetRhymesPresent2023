@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:getrhymes_present.db
+    username: user
+    password: password
+    driverClassName: org.sqlite.JDBC
+#    tomcat:
+#      max-active: 1
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      mode: always
+      continue-on-error: true
+
+server:
+  port: 8084
+
+bot:
+  token: ${TOKEN}
+  name: ${NAME}
+  present: ${PRESENT}
